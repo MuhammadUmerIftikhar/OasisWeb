@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\devil\\\\Documents\\\\oasisstudio\\\\web\\\\node_modules\" -Recurse -Depth 0 | Where-Object { $_.PSIsContainer } | Select-Object -First 30 -Property Name | Sort-Object Name)",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\devil\\\\Documents\\\\oasisstudio\" -Recurse -Depth 1 | Where-Object { -not $_.FullName.Contains\\('node_modules'\\) -and -not $_.FullName.Contains\\('.claude'\\) } | Select-Object FullName, PSIsContainer)",
+      "PowerShell(Get-ChildItem -Path \"c:\\\\Users\\\\devil\\\\Documents\\\\oasisstudio\" -Recurse -Depth 3 | Where-Object { -not $_.FullName.Contains\\('node_modules'\\) -and -not $_.FullName.Contains\\('.claude'\\) -and -not $_.FullName.Contains\\('.next'\\) -and -not $_.FullName.Contains\\('.git'\\) } | Select-Object FullName)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\devil\\\\Documents\\\\oasisstudio\\\\public\\\\\" | Where-Object { $_.Name -match \"^APD\" } | Select-Object Name | Sort-Object Name)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\devil\\\\Documents\\\\oasisstudio\\\\public\\\\\" | Where-Object { $_.Name -match \"^3D\" } | Select-Object Name | Sort-Object { [regex]::Match\\($_.Name, '\\\\d+'\\).Value -as [int] })",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\devil\\\\Documents\\\\oasisstudio\\\\public\" | Where-Object { $_.Name -match '^3D' } | Sort-Object { [int]\\($_.Name -replace '[^0-9]',''\\) } | Select-Object Name)",
+      "WebFetch(domain:dev.lumnbio.com)",
+      "WebSearch",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\devil\\\\Documents\\\\oasisstudio\\\\public\" | Where-Object { $_.Name -match 'HammadDaud' } | Select-Object Name)",
+      "PowerShell(Get-ChildItem \"c:\\\\Users\\\\devil\\\\Documents\\\\oasisstudio\\\\public\" | Where-Object { $_.Name -match 'SaadAfridi|HaseebKiyani' } | Select-Object Name)"
+    ]
+  }
+}
