@@ -17,7 +17,9 @@ const TITLE_MAP: Record<string, string> = {
   '2d-art': '2D Art',
   'testing-qa': 'Testing & QA',
   'video-editing': 'Video Editing',
-  'ai-cloud-engineering': 'AI & Cloud Engineering',
+  'ai-development': 'AI Development',
+  'cloud-engineering': 'Cloud Engineering',
+  'graphic-designing': 'Graphic Designing',
 }
 
 type FaqItem = { question: string; answer: string }
@@ -208,23 +210,6 @@ const SERVICE_FAQS: Record<string, FaqItem[]> = {
       question: 'Does Oasis Studio test games before store submission?',
       answer:
         'Yes. Oasis Studio performs full manual and automated QA passes across iOS and Android builds, covering device matrix testing, regression suites, crash reporting, and sign-off before store submission.',
-    },
-  ],
-  'ai-cloud-engineering': [
-    {
-      question: 'Does Oasis Studio offer combined AI and cloud engineering services?',
-      answer:
-        'Yes. Oasis Studio provides integrated AI and cloud engineering, combining LLM integration, RAG pipelines, and AWS-hosted scalable infrastructure for enterprise AI product delivery.',
-    },
-    {
-      question: 'What AI tools does Oasis Studio use for enterprise projects?',
-      answer:
-        'Oasis Studio uses OpenAI, Anthropic Claude, AWS Bedrock, and OpenSearch for RAG implementations. The studio has delivered production AI systems for government, legal, and enterprise clients.',
-    },
-    {
-      question: 'Can Oasis Studio handle both AI model integration and cloud deployment?',
-      answer:
-        'Yes. Oasis Studio manages the full stack from AI model integration and RAG pipeline design to Docker, Kubernetes, and AWS deployment, providing end-to-end enterprise AI infrastructure.',
     },
   ],
 }
@@ -431,7 +416,7 @@ const PORTFOLIO_DATA: Record<string, Project[]> = {
       links: [{ platform: 'google-play', url: 'https://play.google.com/store/apps/details?id=com.threedev.quran.muslim.pro.offline' }],
     },
   ],
-  'ai-cloud-engineering': [
+  'ai-development': [
     {
       id: 'ai1',
       title: 'Vonza',
@@ -457,6 +442,8 @@ const PORTFOLIO_DATA: Record<string, Project[]> = {
       websiteUrl: 'https://qa.cutslikeaknife.net/',
     },
   ],
+  'cloud-engineering': [],
+  'graphic-designing': [],
   'ui-ux-design': [
     {
       id: 'ux1',
@@ -708,7 +695,7 @@ export default async function ServicePortfolioPage({
   const faqs = SERVICE_FAQS[slug] ?? []
   const pageTitle = `${title} Portfolio | Oasis Studio`
   const pageDescription = `A curated selection of Oasis Studio ${title.toLowerCase()} projects, from initial concept through to final delivery.`
-  const pageUrl = `https://oasisstudio.io/services/${slug}`
+  const pageUrl = `https://oasisstudio.org/services/${slug}`
 
   return (
     <div className="bg-[#121212] text-white min-h-screen">
@@ -777,8 +764,8 @@ export default async function ServicePortfolioPage({
       <section className="relative z-10 py-20 px-6">
         <div className="max-w-6xl mx-auto">
 
-          {slug === 'ai-cloud-engineering' ? (
-            /* ── AI & Cloud Engineering: text-only cards ── */
+          {slug === 'ai-development' ? (
+            /* ── AI Development: text-only cards ── */
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {projects.map((project) => (
                 <article

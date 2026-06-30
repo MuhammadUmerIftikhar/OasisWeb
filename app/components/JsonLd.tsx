@@ -15,8 +15,8 @@ export function OrganizationJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Oasis Studio',
-    url: 'https://oasisstudio.io',
-    logo: 'https://oasisstudio.io/OasisLogoTransparent.png',
+    url: 'https://oasisstudio.org',
+    logo: 'https://oasisstudio.org/OasisLogoTransparent.png',
     email: 'admin@oasisstudio.org',
     foundingDate: '2020',
     description:
@@ -72,6 +72,50 @@ export function OrganizationJsonLd() {
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: '3D Modeling' } },
         { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Testing and QA' } },
       ],
+    },
+  }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
+}
+
+type ArticleJsonLdProps = {
+  headline: string
+  description: string
+  url: string
+  datePublished: string
+  imageUrl?: string
+}
+
+export function ArticleJsonLd({ headline, description, url, datePublished, imageUrl }: ArticleJsonLdProps) {
+  const schema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline,
+    description,
+    url,
+    datePublished,
+    image: imageUrl,
+    author: {
+      '@type': 'Organization',
+      name: 'Oasis Studio',
+      url: 'https://oasisstudio.org',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Oasis Studio',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://oasisstudio.org/OasisLogoTransparent.png',
+      },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': url,
     },
   }
 

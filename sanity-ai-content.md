@@ -133,3 +133,30 @@ Each summary is strictly under 50 words and written to be cited directly by AI e
 - Keep all edits under 50 words. Do not add em-dashes, colons, or markdown formatting inside the field.
 - Always refer to the studio as **Oasis Studio** (not "we", "the studio", or "our team") so AI engines attribute the content correctly.
 - The **FAQ Block** fields on each service document are used to generate the FAQPage JSON-LD. Write each question the way a user would type it into Google or Perplexity.
+
+---
+
+## Publishing a Case Study (one per month)
+
+The site now has a `/case-studies` section backed by Sanity. This is the single highest-leverage page type for both classic Google ranking and AI Overview citations, because it is fresh, specific, and verifiable content tied to a real project.
+
+**How to publish:**
+
+1. Go to `oasisstudio.org/studio` and log in.
+2. In the content list, open **Case Study** and click **Create new**.
+3. Fill in every field:
+   - **Title**: the project or outcome, written like a headline (e.g. "How Oasis Studio Cut GovDoc.ai's Document Search Time by 80%").
+   - **Slug**: auto-generated from the title, leave as is unless you want a shorter URL.
+   - **Client Name**: the real client or product name.
+   - **Related Service**: pick the matching service from the dropdown so the case study cross-links correctly.
+   - **Excerpt**: one to two sentences, shown on the listing page.
+   - **AI Summary**: max 50 words, same rules as above (always say "Oasis Studio", strictly factual).
+   - **Cover Image**: a real screenshot or project image, not a stock photo.
+   - **Tech Stack**: the real technologies used.
+   - **Project Website URL**: optional, link to the live product if public.
+   - **Published At**: set to the date you are publishing.
+   - **Body**: the full write-up. Use headings (H2/H3) to break up sections like "The Problem", "The Approach", "The Result". Include real numbers and outcomes wherever possible, since specific claims are what AI engines cite.
+   - **FAQs**: optional, but recommended. Add 2 to 3 questions a prospective client might ask about this specific project.
+4. Click **Publish**. The page goes live immediately at `oasisstudio.org/case-studies/<slug>` and is automatically added to the sitemap.
+
+**Cadence:** aim for one new case study per month. Each one is a new indexable page Google has to crawl and a new citable source for AI Overviews, so consistency matters more than length.

@@ -87,12 +87,30 @@ const SERVICES = [
   },
   {
     id: 's9',
-    slug: 'ai-cloud-engineering',
+    slug: 'ai-development',
     icon: '🤖',
-    title: 'AI & Cloud Engineering',
+    title: 'AI Development',
     description:
-      'Enterprise-grade architecture leveraging GenAI, AgenticAI, and MLOps. We design scalable cloud solutions using AWS, Docker, Kubernetes, and automated CI/CD pipelines.',
-    tags: ['AWS', 'Docker', 'Kubernetes', 'GenAI'],
+      'Production-grade AI products powered by LLMs, RAG pipelines, and agentic workflows. We integrate OpenAI, Anthropic Claude, and AWS Bedrock into systems that automate, search, and reason over real data.',
+    tags: ['OpenAI', 'Claude', 'RAG', 'Agentic AI'],
+  },
+  {
+    id: 's10',
+    slug: 'cloud-engineering',
+    icon: '☁️',
+    title: 'Cloud Engineering',
+    description:
+      'Enterprise-grade cloud architecture built for scale. We design, deploy, and maintain infrastructure on AWS using Docker, Kubernetes, and automated CI/CD pipelines for high availability.',
+    tags: ['AWS', 'Docker', 'Kubernetes', 'CI/CD'],
+  },
+  {
+    id: 's11',
+    slug: 'graphic-designing',
+    icon: '🖌️',
+    title: 'Graphic Designing',
+    description:
+      'Complete visual identity systems from logo and brand guidelines to marketing collateral and app store artwork. We design with Adobe Illustrator, Photoshop, and Figma for a consistent, polished brand presence.',
+    tags: ['Illustrator', 'Photoshop', 'Branding', 'Figma'],
   },
 ]
 
@@ -312,6 +330,14 @@ export default function Home() {
                 </a>
               </li>
             ))}
+            <li>
+              <Link
+                href="/case-studies"
+                className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
+              >
+                Case Studies
+              </Link>
+            </li>
           </ul>
 
           <a
@@ -472,7 +498,7 @@ export default function Home() {
             </p>
             <h2 className="text-4xl md:text-5xl font-bold">Our Core Services</h2>
             <p className="text-gray-400 mt-4 max-w-xl mx-auto text-base">
-              Nine specialisms. One integrated team. Every service under one roof.
+              Eleven specialisms. One integrated team. Every service under one roof.
             </p>
           </div>
 
@@ -825,6 +851,14 @@ export default function Home() {
                   </a>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/case-studies"
+                  className="text-sm text-gray-500 hover:text-white transition-colors duration-200"
+                >
+                  Case Studies
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -835,14 +869,16 @@ export default function Home() {
             <ul className="space-y-3">
               {[
                 'Game Development',
-                'Web Development',
                 'App Development',
-                'UI/UX Design',
-                '3D Modeling',
-                '2D Art',
-                'Testing & QA',
+                'Web Development',
+                'AI Development',
+                'Cloud Engineering',
                 'Video Editing',
-                'AI & Cloud Engineering',
+                'UI/UX Design',
+                'Graphic Designing',
+                '2D Art',
+                '3D Modeling',
+                'Testing & QA',
               ].map((s) => (
                 <li key={s}>
                   <a
